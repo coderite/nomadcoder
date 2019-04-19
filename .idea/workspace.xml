@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5077b1ab-3c44-455b-98c5-e0a5263699a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/.coveralls.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/src/browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/inspector-log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/src/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,25 +37,25 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -58,9 +76,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/html/index.html" />
       </list>
     </option>
   </component>
@@ -125,12 +143,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555661601235</updated>
-      <workItem from="1555661602520" duration="3303000" />
+      <workItem from="1555661602520" duration="4088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3303000" />
+    <option name="totallyTimeSpent" value="4088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -159,24 +177,24 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="165">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
         </state>
       </provider>
     </entry>
