@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Deployed</title>
+</head>
+<body>
+    <h1>Heroku deployment test</h1>
+    <p>via Github</p>
+    <p id="bitcoin"></p>
+
+    <script>
+        let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@miniTicker');
+        let current = document.getElementById('bitcoin');
+        ws.onmessage = function(event) {
+            let tick = JSON.parse(event.data);
+            current.textContent = tick.c;
+        }
+        ws.onclose = function(event) {
+
+        }
+
+    </script>
+</body>
+</html>
