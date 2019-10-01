@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+        <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+
+    <title>Deployed</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header_h1">
+                <a href="/" class="header_link">code, life, Modafinil</a>
+            </h1>
+            <p class="header_sub">via Github</p>
+        </header>
+
+        <section class="post_section">
+            <!-- POST LOOP -->
+            <% posts.forEach((post) => { %>
+                <article class="post">
+                    <p class="post_date"><%= post.post_date_short %></p>
+                    <h3 class="post_header"><a href="/<%= post.stub %>" class="post_link"><%= post.title %></a></h3>
+                    <p class="post_description"><%- post.description %></p>
+
+                    <p class="post_discussion">Discussion (<a href="/<%= post.stub %>#disqus_thread">comments</a>)</p>
+                </article>
+            <%})%>
+
+            <!-- END POST LOOP -->
+
+            <!-- PAGINATION -->
+            <% if(postCount > 3) { %>
+                <section class="pagination">
+                    <% if(pageNumber > 1) {%> <a href="/page/<%= (pageNumber - 1) %>" class="newer">newer</a>
+                    <% } else { %>
+                        <a></a>
+                    <% } %>
+                    <p class="pages">page <%= pageNumber %> of <%= Math.ceil(postCount / 3) %></p>
+
+                    <% if(pageNumber < Math.ceil(postCount / 3)) { %>
+                        <a href="/page/<%= ++pageNumber %>" class="older">older</a>
+                    <% } else { %>
+                        <a></a>
+                    <% } %>
+                </section>
+            <% } %>
+        </section> <!-- end posts section -->
+
+        <script id="dsq-count-scr" src="//lifecodemodafinil.disqus.com/count.js" async></script>
+    </div>
+</body>
+</html>

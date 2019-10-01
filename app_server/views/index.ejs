@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+
+    <title>Deployed</title>
+</head>
+<body>
+    <div class="container">
+        <%- include('./snippets/header'); %>
+        <section class="post">
+            <!-- POST LOOP -->
+            <% posts.forEach((post) => { %>
+                <article>
+                    <p class="date"><%= post.post_date_short %></p>
+                    <h3 class="title"><a href="/blog/<%= post.stub %>" class="link"><%= post.title %></a></h3>
+                    <p class="description"><%- post.description %></p>
+
+                    <p class="discussion">Discussion (<a href="/blog/<%= post.stub %>#disqus_thread">comments</a>)</p>
+                </article>
+            <%})%>
+
+            <!-- END POST LOOP -->
+
+            <!-- PAGINATION -->
+            <% if(postCount > 3) { %>
+                <section class="pagination">
+                    <% if(pageNumber > 1) {%>
+                        <a href="/blog/page/<%= (pageNumber - 1) %>" class="newer">newer</a>
+                    <% } else { %>
+                         <a class="newer"></a>
+                     <% } %>
+                <p class="pages">page <%= pageNumber %> of <%= Math.ceil(postCount / 3) %></p>
+                        <% if(pageNumber < Math.ceil(postCount / 3)) { %>
+                            <a href="/blog/page/<%= ++pageNumber %>" class="older">older</a>
+                        <% } else { %>
+                            <a class="older"></a>
+                        <% } %>
+                </section>
+            <% } %>
+        </section> <!-- end posts section -->
+
+    <script id="dsq-count-scr" src="//lifecodemodafinil.disqus.com/count.js" async></script>
+
+        <!-- FOOTER AREA -->
+        <%- include('./snippets/footer') %>
+    </div>
+</body>
+</html>

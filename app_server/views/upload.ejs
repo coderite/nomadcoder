@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script defer src="/upload.js"></script>
+
+    <title>upload</title>
+</head>
+<body>
+
+<input type="file" id="file-input">
+<p id="status">Please select a file</p>
+<img id="preview" src=" /default.png">
+
+<form method="POST" action="/blog/aws/save">
+    <input type="hidden" id="avatar-url" name="avatar-url" value="/default.png">
+    <input type="submit" value="do it">
+</form>
+
+</body>
+</html>

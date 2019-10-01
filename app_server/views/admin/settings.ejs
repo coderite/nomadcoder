@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>settings</title>
+</head>
+<body>
+    <%- include('../snippets/adminNavigation') %>
+
+    <!-- breadcrumb -->
+    <nav arial-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">home</li>
+            <li class="breadcrumb-item active" aria-current="page">settings</li>
+        </ol>
+    </nav>
+
+    <%if(typeof error != 'undefined') {%>
+    <div class="alert alert-danger alert-dismissible fade show mx-2" role="alert">
+        <%if(error === 'true' || error === 'auth'){%>Something went wrong!<%}%>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <%}%>
+
+    <%if(typeof success != 'undefined' && success == 'true') {%>
+        <div class="alert alert-success alert-dismissible fade show mx-2" role="alert">
+            Settings updated successfully!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <%}%>
+    <!-- settings card-->
+    <div class="card border-0 mt-0">
+        <div class="card-body">
+
+            <!-- settings form -->
+            <form method="post" action="/admin/settings">
+                <div class="form-group">
+                    <label class="form-group-label">Maintenance mode</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="maintenance_mode" id="mRadio1" value="false" <%= !data.maintenance_mode?'checked':'' %>>
+                        <label class="form-check-label" for="mRadio1">
+                            disabled
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="maintenance_mode" id="mRadio2" value="true" <%= data.maintenance_mode?'checked':'' %>>
+                        <label class="form-check-label" for="mRadio2">
+                            enabled
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-label">Google Indexing</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="google_indexing" id="gRadio1" value="false" <%= !data.google_indexing?'checked':'' %>>
+                        <label class="form-check-label" for="gRadio1">
+                            disabled
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="google_indexing" id="gRadio2" value="true" <%= data.google_indexing?'checked':'' %>>
+                        <label class="form-check-label" for="gRadio2">
+                            enabled
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-label">Author registration</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="author_registration" id="aRadio1" value="false" <%= !data.author_registration?'checked':'' %>>
+                        <label class="form-check-label" for="aRadio1">
+                            disabled
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="author_registration" id="aRadio2" value="true" <%= data.author_registration?'checked':'' %>>
+                        <label class="form-check-label" for="aRadio2">
+                            enabled
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">commit</button>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

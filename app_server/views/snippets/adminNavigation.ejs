@@ -1,0 +1,21 @@
+<header class="adminHeader">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">CLM</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                                <% settings.adminNavigation.nav.forEach((navItem) => { %>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="<%= navItem.href %>"><%= navItem.name%></a>
+                                        </li>
+                                <% }); %>
+
+                        </ul>
+                        <small class="nav-item align-self-center text-muted">Logged in as <%=  payload.name %></small>
+
+                </div>
+        </nav>
+</header>

@@ -1,0 +1,429 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../../sass/adminPosts.scss */
+.adminPostsContainer {
+  background-color: grey;
+}
+
+/* line 13, ../../sass/styles.scss */
+body {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: 'Cabin', Sans-Serif;
+}
+
+/* line 18, ../../sass/styles.scss */
+h1 h2 h3 h4 h5 {
+  font-family: 'Roboto Condensed', Sans-Serif;
+  font-size: 40px;
+}
+
+/* line 23, ../../sass/styles.scss */
+p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* line 28, ../../sass/styles.scss */
+ol, ul {
+  list-style: none;
+  list-style: decimal;
+  padding-left: 2%;
+  line-height: 1.5;
+}
+
+/* line 35, ../../sass/styles.scss */
+iframe, img {
+  padding: 10px 0;
+  max-width: 100%;
+}
+
+/*
+  CONTAINER
+ */
+/* line 43, ../../sass/styles.scss */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 100% 1fr;
+  grid-template-rows: auto 1fr auto auto;
+}
+
+/*
+  POST
+ */
+/* line 52, ../../sass/styles.scss */
+section.post {
+  grid-row-start: 2;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  padding: 2px 2% 10px 2%;
+}
+/* line 60, ../../sass/styles.scss */
+section.post article {
+  align-self: stretch;
+  padding: 1%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+}
+/* line 68, ../../sass/styles.scss */
+section.post p.date {
+  font-size: 0.8em;
+  color: #414141;
+}
+/* line 73, ../../sass/styles.scss */
+section.post h3.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #2d2d2d;
+  padding: 5px 0 5px 0;
+}
+/* line 81, ../../sass/styles.scss */
+section.post .description {
+  padding: 10px 0 10px 0px;
+  color: #373737;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: normal;
+}
+/* line 88, ../../sass/styles.scss */
+section.post .description p {
+  padding: 10px 0 10px 0px;
+  color: #373737;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+/* line 96, ../../sass/styles.scss */
+section.post img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+/* line 103, ../../sass/styles.scss */
+section.post .link {
+  all: unset;
+  cursor: pointer;
+}
+/* line 108, ../../sass/styles.scss */
+section.post .discussion {
+  padding: 10px 0 0px 0;
+}
+/* line 112, ../../sass/styles.scss */
+section.post textarea #summernote:invalid {
+  border: 1px solid red;
+}
+
+/*
+    HEADER
+   */
+/* line 123, ../../sass/styles.scss */
+header {
+  grid-row-start: 1;
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: start;
+  border-bottom: 0.5px solid #e8e8e8;
+}
+/* line 132, ../../sass/styles.scss */
+header .headlines {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 139, ../../sass/styles.scss */
+header a {
+  font-size: 1.2em;
+  all: unset;
+  cursor: pointer;
+}
+/* line 145, ../../sass/styles.scss */
+header h1 {
+  font-size: 2em;
+  color: #2d2d2d;
+  white-space: nowrap;
+}
+/* line 154, ../../sass/styles.scss */
+header .header_sub {
+  white-space: nowrap;
+  font-size: 0.8em;
+  color: #4b4b4b;
+}
+
+/*
+  FOOTER
+  mobile-first ready (optimized for small screens)
+ */
+/* line 165, ../../sass/styles.scss */
+footer {
+  grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  color: #4b4b4b;
+  background-color: #98afb3;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  background-image: url("/tropical-white.png");
+  background-repeat: no-repeat;
+  background-size: 200px auto;
+  background-position: bottom 45px left;
+  display: flex;
+  flex-direction: column;
+}
+/* line 183, ../../sass/styles.scss */
+footer .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5% 24px 5%;
+}
+/* line 191, ../../sass/styles.scss */
+footer .text h1 {
+  font-size: 3em;
+  padding-bottom: 15px;
+}
+/* line 196, ../../sass/styles.scss */
+footer .text p {
+  font-size: 1em;
+  padding-bottom: 8px;
+  text-align: center;
+}
+/* line 202, ../../sass/styles.scss */
+footer .text a {
+  unset: all;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* line 209, ../../sass/styles.scss */
+footer .text a:hover {
+  color: #585858;
+}
+/* line 213, ../../sass/styles.scss */
+footer .copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+/* line 223, ../../sass/styles.scss */
+footer .copyright p {
+  color: #5a5a5a;
+  font-size: 0.7em;
+}
+
+/*
+pagination for main pages
+ */
+/* line 234, ../../sass/styles.scss */
+.pagination {
+  padding: 0 5px 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 242, ../../sass/styles.scss */
+.older {
+  all: unset;
+  cursor: pointer;
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
+  padding-right: 5px;
+}
+
+/* line 249, ../../sass/styles.scss */
+.older:hover {
+  color: dimgrey;
+}
+
+/* line 253, ../../sass/styles.scss */
+.newer {
+  all: unset;
+  cursor: pointer;
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
+  padding-left: 5px;
+}
+
+/* line 260, ../../sass/styles.scss */
+.newer:hover {
+  color: dimgrey;
+}
+
+/* Buzz Out */
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+/* line 352, ../../sass/styles.scss */
+.hvr-buzz-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+
+/* line 359, ../../sass/styles.scss */
+.hvr-buzz-out:hover, .hvr-buzz-out:focus, .hvr-buzz-out:active {
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Medium and up */

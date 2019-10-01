@@ -1,0 +1,97 @@
+
+<form class="form-group px-2 mt-2" method="post" action="/admin/<%=post? 'update' : 'post'%>/<%=post?post.stub:''%>">
+    <!-- row for 2 cards -->
+    <div class="row">
+        <!-- first column -->
+        <div class="col-md-8">
+            <!-- left card -->
+            <div class="card">
+                <div class="card-header p-2">
+                    Input
+                </div>
+
+                <div class="card-body p-2">
+
+                    <!-- publish status -->
+                    <div class="input-group pb-2">
+                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="publishStatusAddon">
+                                            publish
+                                        </span>
+                        </div>
+                        <select class="custom-select" name="publish">
+                            <option value="true" <%= post && post.publish === true ? 'selected' : '' %>>true</option>
+                            <option value="false" <%= post && post.publish === false ? 'selected' : '' %>>false</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group pb-2">
+                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="stubAddon">
+                                            stub
+                                        </span>
+                        </div>
+                        <input type="text" class="form-control" id="stubInputField" name="stub" placeholder="post permalink" value="<%= post ? post.stub : '' %>" required>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="titleAddon">
+                                            title
+                                        </span>
+                        </div>
+                        <input class="form-control" id="titleInputField" type="text" name="title" placeholder="post title" value="<%= post ? post.title : '' %>" required />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- second column -->
+        <div class="col-md-4 ml-0 mt-2 mt-md-0">
+            <!-- stats card (on the right -->
+            <div class="card">
+                <div class="card-header p-2">
+                    Stats
+                </div>
+
+                <!-- STAT card -->
+                <div class="card-body p-2">
+                    <div class="row">
+                        <!--  -->
+                        <div class="input-group mx-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="createdOneAddon">created</span>
+                            </div>
+                            <input type="text" class="form-control text-muted small" disabled value="<%= post ? post.post_date : 'N/A' %>"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!--  -->
+                        <div class="input-group mx-3 mt-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="createdOneAddon">modified</span>
+                            </div>
+                            <input type="text" class="form-control text-muted small" disabled value="<%= post ? post.modified_date : 'N/A' %>"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of main row-->
+
+    <div class="row my-2">
+        <div class="col-12">
+            <textarea class="m-2" id="summernote" name="description" required minlength="1"><%= post ? post.description : '' %></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row my-2">
+            <div class="col-12">
+                <input class="btn btn-primary mx-2 mb-2 fluid" type="submit" value="<%= post ? 'update' : 'post'%>" />
+            </div>
+        </div>
+    </div>
+</form>

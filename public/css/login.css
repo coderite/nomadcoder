@@ -1,0 +1,11 @@
+input {
+    box-shadow: none;
+}
+
+input:invalid:focus {
+    box-shadow: 0 0 5px 1px red;
+}
+
+input:valid:focus {
+    box-shadow: 0 0 5px 1px green;
+}

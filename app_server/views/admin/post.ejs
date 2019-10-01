@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create post</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- include summernote css/js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+</head>
+    <body>
+        <!-- admin navigation -->
+        <%- include('../snippets/adminNavigation') %>
+
+        <nav arial-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">home</li>
+                <li class="breadcrumb-item active" aria-current="page"><%= post? 'edit': 'new'%></li>
+            </ol>
+        </nav>
+
+        <%if(typeof error != 'undefined') {%>
+            <div class="alert alert-danger alert-dismissible fade show mx-2" role="alert">
+                <%if(error === 'val'){%>Please complete all fields!<%}%>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <%}%>
+
+        <%if(typeof success != 'undefined' && success == 'true') {%>
+            <div class="alert alert-success alert-dismissible fade show mx-2" role="alert">
+                Post updated successfully!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <%}%>
+
+            <!-- enter the post creation form snippet -->
+            <%- include('../snippets/adminCreatePostForm'); %>
+
+
+            <!-- Bootstrap 4 files (before custom js) -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+            <!-- summer note js (before custom js) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('#summernote').summernote(
+                    {
+                        height: 300,
+                        minHeight: null,
+                        maxHeight: null,
+                        focus: true,
+                        toolbar: [
+                            ['style', ['bold', 'italic', 'underline', 'clear']],
+                            ['color', ['color']],
+                            ['para', ['ul', 'ol', 'paragraph']],
+                            ['insert', ['link', 'picture', 'video']],
+                            ['view', ['fullscreen', 'codeview', 'help']]
+                        ],
+                        callbacks: {
+                            onInit: function(e) {
+                              console.log('summernote has initialized');
+                                $('#summernote').summernote({
+                                    fontNames: ['Cabin']
+                                });
+                                console.log('Cabin font applied');
+
+                            },
+                            onPaste: function(e) {
+                                console.log('something was pasted');
+                                let html = $('#summernote').summernote('code');
+                                console.log(html);
+
+
+                            }
+                        }
+                    },
+
+                );
+            });
+        </script>
+    </body>
+</html>

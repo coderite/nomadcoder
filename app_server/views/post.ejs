@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property=”og:title” content=”<%-data.title%>” />
+    <meta property=”og:type” content=”blog” />
+    <meta property=”og:image” content=”/tropical-white.png” />
+    <meta property=”og:url” content=”<%-data.url%>” />
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <!-- CSS -->
+    <link href="/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+
+    <title>NomadCoder</title>
+</head>
+<body>
+    <div class="container">
+        <%- include('./snippets/header'); %>
+            <!-- POST SECTION -->
+            <section class="post">
+                <article>
+                    <% const post = data %>
+                    <p class="date"><%= post.post_date_short %></p>
+                    <h3 class="title"><%= post.title %></h3>
+                    <p class="description"><%- post.description %></p>
+
+                    <!-- COMMENT SECTION-->
+                    <div id="disqus_thread">
+                        <script>
+                            let disqus_config = function () {
+                            this.page.url =  post.url;
+                            this.page.identifier = post._id;
+                            };
+
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = 'https://lifecodemodafinil.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </article>
+            </section>
+
+        <script id="dsq-count-scr" src="//lifecodemodafinil.disqus.com/count.js" async></script>
+
+    <!-- FOOTER AREA -->
+    <%- include('./snippets/footer') %>
+    </div>
+</body>
+</html>

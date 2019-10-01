@@ -1,0 +1,623 @@
+/* line 5, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../../sass/styles_prtfl.scss */
+html {
+  scroll-behavior: smooth;
+}
+
+/* line 10, ../../sass/styles_prtfl.scss */
+body {
+  font-family: 'Cabin', Sans-Serif;
+}
+
+/* line 14, ../../sass/styles_prtfl.scss */
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Condensed', Sans-Serif;
+  font-size: 40px;
+}
+
+/* line 19, ../../sass/styles_prtfl.scss */
+p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* line 24, ../../sass/styles_prtfl.scss */
+textarea {
+  font-family: 'Cabin', Sans-Serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* line 30, ../../sass/styles_prtfl.scss */
+ol, ul {
+  list-style: none;
+  padding-left: 2%;
+  line-height: 1.5;
+}
+
+/* line 36, ../../sass/styles_prtfl.scss */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(7, auto);
+}
+
+/* line 42, ../../sass/styles_prtfl.scss */
+header {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 51, ../../sass/styles_prtfl.scss */
+header .navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 57, ../../sass/styles_prtfl.scss */
+header .navbar .navbar-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+}
+/* line 65, ../../sass/styles_prtfl.scss */
+header .navbar .navbar-top h1 a {
+  unset: all;
+  text-decoration: none;
+  color: inherit;
+}
+/* line 73, ../../sass/styles_prtfl.scss */
+header .navbar .navbar-top .navbar-toggle {
+  cursor: pointer;
+}
+/* line 78, ../../sass/styles_prtfl.scss */
+header .navbar .nav-items {
+  margin-top: 5px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;
+}
+/* line 89, ../../sass/styles_prtfl.scss */
+header .navbar .nav-items li {
+  margin-top: 10px;
+}
+/* line 93, ../../sass/styles_prtfl.scss */
+header .navbar .nav-items li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 102, ../../sass/styles_prtfl.scss */
+header .navbar .show {
+  display: block;
+  animation-duration: 0.5s;
+  animation-name: slide;
+}
+/* line 109, ../../sass/styles_prtfl.scss */
+header .navbar .navbar-toggle {
+  align-self: flex-end;
+}
+/* line 113, ../../sass/styles_prtfl.scss */
+header .navbar .navbar-link {
+  padding-right: 8px;
+}
+
+@keyframes slide {
+  from {
+    margin-top: -30px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 5px;
+    opacity: 1;
+  }
+}
+/* line 131, ../../sass/styles_prtfl.scss */
+.hero {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: calc(100vh - 0px);
+  text-align: center;
+  background-color: #AECACE;
+  background-image: url("hero-optimized.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+/* line 149, ../../sass/styles_prtfl.scss */
+.hero .sub {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  padding: 0.75% 1%;
+  margin: 0 5%;
+}
+/* line 156, ../../sass/styles_prtfl.scss */
+.hero .sub h1 {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2em;
+  mix-blend-mode: multiply;
+}
+/* line 164, ../../sass/styles_prtfl.scss */
+.hero .hello {
+  padding: 1%;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 169, ../../sass/styles_prtfl.scss */
+.hero .hello p {
+  font-size: 5em;
+}
+/* line 174, ../../sass/styles_prtfl.scss */
+.hero .hero-filter {
+  height: inherit;
+  background-color: rgba(174, 202, 206, 0.2);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 187, ../../sass/styles_prtfl.scss */
+.hero .btnContact {
+  margin-top: 3%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* line 193, ../../sass/styles_prtfl.scss */
+.hero .btnContact p {
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* line 198, ../../sass/styles_prtfl.scss */
+.hero .btnContact a {
+  unset: all;
+  text-decoration: none;
+  color: inherit;
+}
+/* line 206, ../../sass/styles_prtfl.scss */
+.hero .cta {
+  position: relative;
+  bottom: calc(100vh - 90%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+/* line 215, ../../sass/styles_prtfl.scss */
+.hero .cta a {
+  color: unset;
+}
+@keyframes pulse {
+  0% {
+    color: rgba(255, 255, 255, 0);
+    transform: translateY(-50px);
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.5);
+    transform: translateY(0px);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+    transform: translateY(0px);
+  }
+}
+/* line 241, ../../sass/styles_prtfl.scss */
+.skills {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 10px;
+}
+/* line 257, ../../sass/styles_prtfl.scss */
+.skills h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2em;
+  padding: 10px 0;
+}
+/* line 264, ../../sass/styles_prtfl.scss */
+.skills p {
+  padding: 0 0 20px 0;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+/* line 270, ../../sass/styles_prtfl.scss */
+.skills .skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 275, ../../sass/styles_prtfl.scss */
+.skills .skill-items .skill {
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/* line 285, ../../sass/styles_prtfl.scss */
+.skills .skill-items .skill .logo {
+  width: 175px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 294, ../../sass/styles_prtfl.scss */
+.skills .skill-items .skill .logo img {
+  max-width: 100%;
+}
+
+/* line 302, ../../sass/styles_prtfl.scss */
+.projects {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 30px 10px;
+  background-color: #AECACE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* line 319, ../../sass/styles_prtfl.scss */
+.projects h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2em;
+  padding: 10px 0;
+}
+/* line 326, ../../sass/styles_prtfl.scss */
+.projects p {
+  padding: 0 0 20px 0;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+/* line 332, ../../sass/styles_prtfl.scss */
+.projects .p-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+/* line 340, ../../sass/styles_prtfl.scss */
+.projects .p-container .project {
+  margin: 10px;
+  cursor: pointer;
+}
+/* line 344, ../../sass/styles_prtfl.scss */
+.projects .p-container .project img {
+  mix-blend-mode: difference;
+}
+/* line 349, ../../sass/styles_prtfl.scss */
+.projects .p-container .project:hover {
+  mix-blend-mode: multiply;
+}
+
+/* line 355, ../../sass/styles_prtfl.scss */
+.blog {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  min-height: 60vh;
+  background-image: url("laptopscene3.jpg"), linear-gradient(#AECACE, white);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+/* line 371, ../../sass/styles_prtfl.scss */
+.blog .filter {
+  height: 60vh;
+  background-color: rgba(174, 202, 206, 0.25);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 381, ../../sass/styles_prtfl.scss */
+.blog .filter h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2em;
+  padding: 10px 0;
+}
+/* line 388, ../../sass/styles_prtfl.scss */
+.blog .filter p {
+  padding: 0 0 20px 0;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+/* line 394, ../../sass/styles_prtfl.scss */
+.blog .filter a {
+  unset: all;
+  text-decoration: none;
+  color: white;
+}
+/* line 400, ../../sass/styles_prtfl.scss */
+.blog .filter .btnBlog {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid whitesmoke;
+  font-size: 2em;
+  border-radius: 2px;
+  padding: 2% 5%;
+  transition: all 0.2s ease-in;
+}
+/* line 412, ../../sass/styles_prtfl.scss */
+.blog .filter .btnBlog:hover {
+  color: blue;
+}
+
+/* line 422, ../../sass/styles_prtfl.scss */
+.contact {
+  grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  background-color: #c4d6b0;
+  /*
+  background-image: url('contact2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+   */
+}
+/* line 445, ../../sass/styles_prtfl.scss */
+.contact .header {
+  width: 75%;
+}
+/* line 450, ../../sass/styles_prtfl.scss */
+.contact h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2em;
+  padding: 10px 0;
+}
+/* line 457, ../../sass/styles_prtfl.scss */
+.contact p {
+  padding: 0 0 20px 0;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+/* line 463, ../../sass/styles_prtfl.scss */
+.contact .email {
+  width: 75%;
+}
+/* line 466, ../../sass/styles_prtfl.scss */
+.contact .email .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+/* line 473, ../../sass/styles_prtfl.scss */
+.contact .email .row .row-item {
+  margin: 0 5px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 481, ../../sass/styles_prtfl.scss */
+.contact .email .row .row-item input, .contact .email .row .row-item select {
+  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+  padding: 0 4px;
+}
+/* line 489, ../../sass/styles_prtfl.scss */
+.contact .email .row .row-item label {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9em;
+  padding: 5px 0;
+}
+/* line 496, ../../sass/styles_prtfl.scss */
+.contact .email .row textarea {
+  resize: none;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 5px 5px;
+  border: none;
+  border-radius: 3px;
+  width: 288px;
+  height: 250px;
+  line-height: 1.2em;
+}
+/* line 507, ../../sass/styles_prtfl.scss */
+.contact .email .row button {
+  width: 288px;
+  height: 30px;
+}
+@media only screen and (min-width: 864px) {
+  /* line 514, ../../sass/styles_prtfl.scss */
+  .contact .email .row textarea {
+    width: 600px;
+  }
+  /* line 518, ../../sass/styles_prtfl.scss */
+  .contact .email .row button {
+    width: 600px;
+  }
+}
+
+/*
+  FOOTER
+  mobile-first ready (optimized for small screens)
+ */
+/* line 530, ../../sass/styles_prtfl.scss */
+footer {
+  grid-row-start: 7;
+  grid-row-end: 8;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  color: #4b4b4b;
+  background-color: #98afb3;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+  background-image: url("/tropical-white.png");
+  background-repeat: no-repeat;
+  background-size: 200px auto;
+  background-position: bottom 45px left;
+  display: flex;
+  flex-direction: column;
+}
+/* line 548, ../../sass/styles_prtfl.scss */
+footer .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5% 24px 5%;
+}
+/* line 556, ../../sass/styles_prtfl.scss */
+footer .text h1 {
+  font-size: 3em;
+  padding-bottom: 15px;
+}
+/* line 561, ../../sass/styles_prtfl.scss */
+footer .text p {
+  font-size: 1em;
+  padding-bottom: 8px;
+  text-align: center;
+}
+/* line 567, ../../sass/styles_prtfl.scss */
+footer .text a {
+  unset: all;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* line 574, ../../sass/styles_prtfl.scss */
+footer .text a:hover {
+  color: #585858;
+}
+/* line 580, ../../sass/styles_prtfl.scss */
+footer .nav .nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* line 586, ../../sass/styles_prtfl.scss */
+footer .nav .nav-items .nav-item {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+/* line 590, ../../sass/styles_prtfl.scss */
+footer .nav .nav-items .nav-item a {
+  unset: all;
+  text-decoration: none;
+  color: inherit;
+}
+/* line 597, ../../sass/styles_prtfl.scss */
+footer .nav .nav-items .nav-item:hover {
+  padding: 8px 9px 7px 9px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: white;
+  color: #585858;
+}
+/* line 612, ../../sass/styles_prtfl.scss */
+footer .copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+/* line 622, ../../sass/styles_prtfl.scss */
+footer .copyright p {
+  color: #5a5a5a;
+  font-size: 0.7em;
+}

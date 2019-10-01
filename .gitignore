@@ -1,0 +1,11 @@
+# do not track the following directories
+node_modules/
+sass/
+.sass-cache/
+public/.sass-cache
+
+
+
+# do not track these individual files
+.env
+config.json
