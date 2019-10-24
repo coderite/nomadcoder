@@ -56,7 +56,7 @@ const postPost = (req, res) => {
     }
     const post = {
         title: title,
-        stub: stub,
+        stub: normalizeStub(stub),
         description: description,
         tags: tags,
         author: author,
@@ -87,13 +87,18 @@ const postPost = (req, res) => {
     });
 };
 
+function normalizeStub(stub) {
+    stub = stub.trim().toLowerCase();
+    return stub.replace(/ /g, "-");
+}
+
 const updatePost = (req, res) => {
     debug('updating post');
     const {title, stub, description, tags, author, publish} = req.body;
 
     const post = {
         title: title,
-        stub: stub,
+        stub: normalizeStub(stub),
         description: description,
         tags: tags,
         author: author,

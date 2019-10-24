@@ -8,7 +8,37 @@ const mailer = require('nodemailer');
 
 exports.message = (req, res) => {
     const {name, email, subject, budget, message} = req.body;
-    let transporter = mailer.createTransport({
+    let transporter = getTransporter();
+    let htmlMessage = message.replace(/\r\n\r\n/g, "</p><p>").replace(/\n\n/g, "</p><p>");
+    htmlMessage = htmlMessage.replace(/\r\n/g, "<br />").replace(/\n/g, "<br />");
+
+    let mailOptions = {
+        from: 'hello@nomadcoder.io',
+        to: process.env.DEFAULT_EMAIL,
+        subject: 'nomad coder form submission',
+        html: `<b>submitted by</b> ${name}<br>
+<b>origin</b> ${email}<br>
+<b>subject</b> ${subject}<br>
+<b>budget</b> ${budget}<br>
+<hr>
+<h3>message</h3>
+<p>${htmlMessage}</p>`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('shitcakes ' + error);
+            return;
+        }
+        debug('message has been sent');
+        debug('sending welcome message');
+        sendWelcomeMessage(req.body);
+    });
+    res.status(200).json({'message':'message received'});
+};
+
+function getTransporter() {
+    return mailer.createTransport({
         host: process.env.MAIL_SMTP,
         port: process.env.MAIL_PORT,
         secure: false,
@@ -20,29 +50,37 @@ exports.message = (req, res) => {
             ciphers:'SSLv3'
         }
     });
+}
 
+function sendWelcomeMessage(formData) {
+    const {name, email, subject, budget, message} = formData;
+
+    let transporter = getTransporter();
     let mailOptions = {
         from: 'hello@nomadcoder.io',
-        to: process.env.DEFAULT_EMAIL,
-        subject: 'nomad coder form submission',
-        html: `<b>submitted by</b> ${name}
-<b>origin</b> ${email}
-<b>subject</b> ${subject}
-<b>budget</b> ${budget}
-<hr>
-<h3>message</h3>
-<p>${message}</p>`,
-    };
+        to: email,
+        subject: 'I got your message!',
+        html: `Hi ${name},<br>
+<br> 
+thank you for reaching out to me.<br>
+<br>        
+Herewith a little automated message, but I promise to personally respond to you as soon as possible.<br>
+<br>
+<br>        
+Be well,<br><br>
+<strong>Lucas Sadilek</strong><br>
+<a href="https://nomadcoder.io">Nomadcoder.io</a>`
+    }
 
     transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log('shitcakes ' + error);
-            return;
+        if(error) {
+            debug(error);
+        } else {
+            debug(`welcome email sent to ${name} @ ${email}`);
         }
-        console.log('message has been sent');
     });
-    res.status(200).json({'message':'message received'});
-};
+
+}
 
 exports.registerUser = (req, res) => {
     // initialize and assign variables

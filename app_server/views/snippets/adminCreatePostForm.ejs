@@ -1,5 +1,5 @@
 
-<form class="form-group px-2 mt-2" method="post" action="/admin/<%=post? 'update' : 'post'%>/<%=post?post.stub:''%>">
+<form class="form-group px-2 mt-2" method="post" onsubmit="return copyCodeIfCodeView()" action="/admin/<%=post? 'update' : 'post'%>/<%=post?post.stub:''%>">
     <!-- row for 2 cards -->
     <div class="row">
         <!-- first column -->
@@ -95,3 +95,14 @@
         </div>
     </div>
 </form>
+
+<script>
+    function copyCodeIfCodeView() {
+        console.log('running copyCodeIfCodeView function');
+        if ($('#summernote').summernote('codeview.isActivated')) {
+            console.log('codeView is activated');
+            let context_textarea = window.document.getElementById('summernote');
+            context_textarea.value = $('#summernote').summernote('code')
+        }
+    }
+</script>

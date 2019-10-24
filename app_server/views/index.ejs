@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro&display=swap" rel="stylesheet">
+    <!-- GENERAL STYLES -->
     <link href="/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!-- Highlight.js syntax highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    <link rel="stylesheet" href="/atom-light.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <!--[if IE]>
     <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -17,43 +22,27 @@
 </head>
 <body>
     <div class="container">
+        <!-- HEADER SNIPPET -->
         <%- include('./snippets/header'); %>
         <section class="post">
             <!-- POST LOOP -->
             <% posts.forEach((post) => { %>
                 <article>
-                    <p class="date"><%= post.post_date_short %></p>
-                    <h3 class="title"><a href="/blog/<%= post.stub %>" class="link"><%= post.title %></a></h3>
-                    <p class="description"><%- post.description %></p>
-
+                    <div class="date"><%= post.post_date_short %></div>
+                    <h1 class="title"><a href="/blog/<%= post.stub %>" class="link"><%= post.title %></a></h1>
+                    <div class="description"><%- post.description %></div>
                     <p class="discussion">Discussion (<a href="/blog/<%= post.stub %>#disqus_thread">comments</a>)</p>
                 </article>
             <%})%>
 
-            <!-- END POST LOOP -->
-
             <!-- PAGINATION -->
-            <% if(postCount > 3) { %>
-                <section class="pagination">
-                    <% if(pageNumber > 1) {%>
-                        <a href="/blog/page/<%= (pageNumber - 1) %>" class="newer">newer</a>
-                    <% } else { %>
-                         <a class="newer"></a>
-                     <% } %>
-                <p class="pages">page <%= pageNumber %> of <%= Math.ceil(postCount / 3) %></p>
-                        <% if(pageNumber < Math.ceil(postCount / 3)) { %>
-                            <a href="/blog/page/<%= ++pageNumber %>" class="older">older</a>
-                        <% } else { %>
-                            <a class="older"></a>
-                        <% } %>
-                </section>
-            <% } %>
+            <%- include('./snippets/pagination') %>
         </section> <!-- end posts section -->
-
-    <script id="dsq-count-scr" src="//lifecodemodafinil.disqus.com/count.js" async></script>
 
         <!-- FOOTER AREA -->
         <%- include('./snippets/footer') %>
     </div>
+    <script id="dsq-count-scr" src="//lifecodemodafinil.disqus.com/count.js" async></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

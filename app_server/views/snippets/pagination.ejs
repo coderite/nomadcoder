@@ -1,0 +1,15 @@
+<% if(postCount > 3) { %>
+    <section class="pagination">
+        <% if(pageNumber > 1) {%>
+            <a href="/blog/page/<%= (pageNumber - 1) %>" class="newer">newer</a>
+        <% } else { %>
+            <a class="newer"></a>
+        <% } %>
+        <p class="pages">page <%= pageNumber %> of <%= Math.ceil(postCount / 3) %></p>
+        <% if(pageNumber < Math.ceil(postCount / 3)) { %>
+            <a href="/blog/page/<%= ++pageNumber %>" class="older">older</a>
+        <% } else { %>
+            <a class="older"></a>
+        <% } %>
+    </section>
+<% } %>

@@ -11,9 +11,14 @@
     <meta property=”og:url” content=”<%-data.url%>” />
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link href="/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!-- Highlight.js syntax highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    <link rel="stylesheet" href="/atom-light.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <!--[if IE]>
     <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -28,9 +33,12 @@
             <section class="post">
                 <article>
                     <% const post = data %>
-                    <p class="date"><%= post.post_date_short %></p>
-                    <h3 class="title"><%= post.title %></h3>
-                    <p class="description"><%- post.description %></p>
+                    <div class="date"><%= post.post_date_short %></div>
+                    <h1 class="title"><%= post.title %></h1>
+                    <div class="description"><%- post.description %>
+                    </div>
+
+
 
                     <!-- COMMENT SECTION-->
                     <div id="disqus_thread">
@@ -57,5 +65,6 @@
     <!-- FOOTER AREA -->
     <%- include('./snippets/footer') %>
     </div>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

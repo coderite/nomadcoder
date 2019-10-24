@@ -60,8 +60,6 @@
                         maxHeight: null,
                         focus: true,
                         toolbar: [
-                            ['style', ['bold', 'italic', 'underline', 'clear']],
-                            ['color', ['color']],
                             ['para', ['ul', 'ol', 'paragraph']],
                             ['insert', ['link', 'picture', 'video']],
                             ['view', ['fullscreen', 'codeview', 'help']]
@@ -69,18 +67,52 @@
                         callbacks: {
                             onInit: function(e) {
                               console.log('summernote has initialized');
+                              /*
                                 $('#summernote').summernote({
                                     fontNames: ['Cabin']
                                 });
                                 console.log('Cabin font applied');
+                                */
+                            },
+                            onChange: function(e) {
+                                /*
+                              let html = $('#summernote').summernote('code');
+                              let div = document.createElement('div');
+                              div.innerHTML = html;
 
+                              // span checker
+                              let spans = div.getElementsByTagName('span');
+                              console.log(`there are ${spans.length} <span> elements`);
+
+                              if(spans.length > 0) {
+                                  for (let span of spans) {
+                                      console.log(`checking span ${span.innerHTML}`);
+                                      let newInnerHTML = span.innerHTML;
+                                      let parentNode = span.parentNode;
+
+                                      parentNode.innerHTML = newInnerHTML;
+                                  }
+                              }
+
+                                $('#summernote').summernote('destroy');
+                                $('#summernote').html($('#summernote').summernote('code', div.innerHTML));
+                                */
                             },
                             onPaste: function(e) {
+                                /*
+                                let clipboardData = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                                console.log('data: ' + clipboardData);
+                                e.preventDefault();
+
+                                let node = document.createElement('pre');
+                                let code = document.createElement('code');
+                                code.innerHTML = clipboardData;
+                                node.appendChild(code);
+
+                                $('#summernote').summernote('insertNode', node);
                                 console.log('something was pasted');
-                                let html = $('#summernote').summernote('code');
-                                console.log(html);
 
-
+                                 */
                             }
                         }
                     },

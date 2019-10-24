@@ -36,7 +36,7 @@
             margin: 1px;
             border-radius: 50%;
             border: 5px solid #ffd442;
-            border-color: #ff3e33 transparent #87c7ff transparent;
+            border-color: #707070 transparent #3d3d3d transparent;
             animation: lil-spinner 1.2s linear infinite;
         }
         @keyframes lil-spinner {
@@ -68,7 +68,7 @@
                     <li><a class="nav-link" href="#skills">about</a></li>
                     <li><a class="nav-link" href="#projects">projects</a></li>
                     <li><a class="nav-link" href="/blog">blog</a></li>
-                    <li><a class="nav-link" href="#contact">get in touch</a></li>
+                    <li><a class="nav-cta" id="contactBtn" href="#contact">get in touch</a></li>
                 </ul>
             </nav>
         </header>
@@ -81,9 +81,8 @@
                 <div class="sub">
                     <h1>i am Lucas, i build web apps</h1>
                 </div>
-
-                <div class="btnContact">
-                    <p><a href="#contact">get in touch</a></p>
+                <div class="btn-container">
+                    <a href="#contact" class="button">get in touch</a>
                 </div>
             </div>
             <div class="cta">
@@ -94,69 +93,81 @@
         <section class="skills" id="skills">
             <div class="header">
 
-                <h1><i class="fas fa-toolbox"></i> what's in my toolbox</h1>
-                <p>Some of the technology I use to build projects. I favor the MEN and MERN stacks to develop web apps.</p>
+                <h1><i class="fas fa-user"></i> a little about me</h1>
+                <div class="about">
+                    <div class="text">
+                        <p>Hello! I'm Lucas, a freelance web developer. I build modern SAAS web applications that do useful and profitable things.</p>
+                        <p>I have a background in Software Engineering in Test for companies like <a href="https://www.monster.com">Monster</a> and <a href="https://applause.com">Applause</a>. Following a passion I switched focus and started building and operating SAAS applications. I am also available for freelance web development.</p>
+                        <p>Aside from software engineering, I am a cave diver and subsequently explore the darkness beyond the light. I work remotely and combine a love for web development with a nomadic lifestyle.</p>
+                    </div>
+                    <div class="image">
+                        <img src="/profile.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="technologies-header">
+                <h3>Technologies in my toolbox:</h3>
             </div>
             <div class="skill-items">
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/javascript.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">Javascript</h3>
+                    <h4 class="sub">Javascript</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/nodejs.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">NodeJS</h3>
+                    <h4 class="sub">NodeJS</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/express.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">ExpressJS</h3>
+                    <h4 class="sub">ExpressJS</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/mongodb.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">Mongo DB</h3>
+                    <h4 class="sub">Mongo DB</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/bootstrap.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">Bootstrap</h3>
+                    <h4 class="sub">Bootstrap</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/github.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">Github</h3>
+                    <h4 class="sub">Github</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/heroku.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">Heroku</h3>
+                    <h4 class="sub">Heroku</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/html5.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">HTML5</h3>
+                    <h4 class="sub">HTML5</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/css3.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">CSS3</h3>
+                    <h4 class="sub">CSS3</h4>
                 </div>
                 <div class="skill">
                     <div class="logo">
                         <img src="/logo/sass.png" loading="lazy" />
                     </div>
-                    <h3 class="sub">SASS</h3>
+                    <h4 class="sub">SASS</h4>
                 </div>
             </div>
         </section>
@@ -182,8 +193,8 @@
 
         <section class="blog" id="blog">
             <div class="filter">
-                <div class="header">
-                    <a href="/blog" class="btnBlog">read my blog</a>
+                <div class="btn-container">
+                    <a href="/blog" class="button">read my blog</a>
                 </div>
             </div>
         </section>
@@ -230,10 +241,24 @@
                     <textarea id="message" name="message" placeholder="write beautiful words..."></textarea>
                 </div>
                 <div class="row">
-                    <button type="submit" value="submit">submit</button>
+                    <button type="submit" value="submit" id="submit">submit</button>
                 </div>
             </form>
         </section>
+
+        <div class="notification-wrapper" id="notification-wrapper">
+            <div class="notification-container">
+                <div class="header">
+                    <h1 id="notification-header-text"></h1>
+                    <div class="close" id="close">
+                        <i class="far fa-window-close"></i>
+                    </div>
+                </div>
+                <div class="body">
+                    <p id="notification-body-text"></p>
+                </div>
+            </div>
+        </div>
 
 
         <!-- FOOTER -->
