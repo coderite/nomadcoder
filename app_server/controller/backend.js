@@ -2,7 +2,6 @@ const debug = require('debug')('backend:controller');
 const passport = require('passport');
 const settings = require('../config/settings.js');
 const request = require('request');
-const config = require('../../config.json');
 const ctrlAutherization = require('./authentication');
 const mailer = require('nodemailer');
 

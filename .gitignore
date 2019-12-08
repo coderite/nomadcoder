@@ -9,7 +9,6 @@ public/.sass-cache
 
 # do not track these individual files
 .env
-config.json
 config.rb
 data.js
 learn.js

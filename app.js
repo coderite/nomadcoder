@@ -49,7 +49,6 @@ app.use(passport.initialize());
 app.use('/api', routerApi);
 app.use('/', routerApp);
 
-
 // allow CORS
 app.use('/api', (req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'http://localhost:5000');
@@ -64,4 +63,6 @@ app.use((err, req, res, next) => {
     }
 });
 
-app.listen(port, () => debug(`listening on port ${port}`));
+if(process.env.NODE_ENV !== 'production' || process.env.NODE_ENV === "") {
+    app.listen(port, () => debug(`listening on ${process.env.API_SERVER}:${port}`));
+}

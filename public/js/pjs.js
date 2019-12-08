@@ -56,20 +56,20 @@ function postForm(json, action) {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', action, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(json);
 
     xhr.onload = () => {
-      console.log(`onload ${xhr.status} ${xhr.response}`);
       if(xhr.status === 200) {
           showNotification('Thank you!', 'I have received your message. You will receive an email shortly.');
       } else {
-          showNotification('Thank you!', 'While you submitted your message, an error was returned from the server. Please try emailing me directly at hello@nomadcoder.io instead. Thanks for understanding.')
+          showNotification('Oh snap!', 'Something went wrong while submitting your message. Please try emailing me directly at hello@nomadcoder.io instead. Thanks for understanding.');
       }
     };
 
     xhr.onerror = () => {
-        console.log(`onerror ${xhr.status} ${xhr.response}`)
+        showNotification('Oh shoot!', 'While you submitted your message, an error was returned from the server. Please try emailing me directly at hello@nomadcoder.io instead. Thanks for understanding.');
     };
+
+    xhr.send(json);
 }
 
 function showNotification(header, body) {
