@@ -63,6 +63,6 @@ app.use((err, req, res, next) => {
     }
 });
 
-if(process.env.NODE_ENV !== 'production' || process.env.NODE_ENV === "") {
+//if(process.env.NODE_ENV !== 'production') {
     app.listen(port, () => debug(`listening on ${process.env.API_SERVER}:${port}`));
-}
+//}
