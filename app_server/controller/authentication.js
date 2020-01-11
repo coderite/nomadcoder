@@ -4,6 +4,15 @@ const store = require('store');
 
 const atob = str => Buffer.from(str, 'base64').toString('binary');
 
+// check if its production or not and return the right URI
+function getServer() {
+    if(process.env.NODE_ENV == 'production') {
+        return `${process.env.API_SERVER}`;
+    } else {
+        return `${process.env.API_SERVER}:${process.env.PORT}`;
+    }
+}
+
 const getLoginPage = (req, res) => {
     debug('getting login page');
     const data = {
@@ -22,7 +31,7 @@ const login = (req, res) => {
     }
 
     const path = '/api/login';
-    const url =  `${process.env.API_SERVER}:${process.env.PORT}${path}`;
+    const url =  `${getServer()}${path}`;
     const requestOptions = {
         url:url,
         method: 'POST',
