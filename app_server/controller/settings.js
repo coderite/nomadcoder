@@ -3,10 +3,19 @@ const settings = require('../config/settings');
 const debug = require('debug')('app-ctrl-settings');
 const store = require('store');
 
+// check if its production or not and return the right URI
+function getServer() {
+    if(process.env.NODE_ENV == 'production') {
+        return `${process.env.API_SERVER}`;
+    } else {
+        return `${process.env.API_SERVER}:${process.env.PORT}`;
+    }
+}
+
 const getSettings = (req, res) => {
     // request settings from backend
     debug('app requesting settings');
-    const url = `${process.env.API_SERVER}:${process.env.PORT}/api/settings`;
+    const url = `${getServer()}/api/settings`;
     debug('URL: ' + url);
     const requestOptions = {
         url:url,
@@ -35,7 +44,7 @@ const updateSettings = (req, res) => {
     debug('updating settings');
     const {maintenance_mode, google_indexing, author_registration, page_post_limit} = req.body;
 
-    const url = `${process.env.API_SERVER}:${process.env.PORT}/api/settings`;
+    const url = `${getServer()}/api/settings`;
     const settingsData = {
         maintenance_mode,
         google_indexing,
@@ -79,7 +88,7 @@ const updateSettings = (req, res) => {
 const isMaintenanceMode = (req, res, next) => {
     debug('checking for maintenance mode');
 
-    const url = `${process.env.API_SERVER}:${process.env.PORT}/api/settings`;
+    const url = `${getServer()}/api/settings`;
     debug('using url: ' + url);
 
     // no need for authorization because middleware is intended for public consumption
@@ -115,7 +124,7 @@ const getRobots = (req, res) => {
     // check if Google indexing has been enabled
     debug('checking for Google Indexing status');
 
-    const url = `${process.env.API_SERVER}:${process.env.PORT}/api/settings`;
+    const url = `${getServer()}/api/settings`;
     debug('using url: ' + url);
 
     // no need for authorization because middleware is intended for public consumption
@@ -152,7 +161,7 @@ const getRobots = (req, res) => {
 const isRegistrationEnabled = (req, res, next) => {
     debug('checking is registration enabled');
 
-    const url = `${process.env.API_SERVER}:${process.env.PORT}/api/settings`;
+    const url = `${getServer()}/api/settings`;
     debug('using url: ' + url);
 
     // no need for authorization because middleware is intended for public consumption
