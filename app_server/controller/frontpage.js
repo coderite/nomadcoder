@@ -1,9 +1,19 @@
 const debug = require('debug')('app-ctrl-frontpage');
 const request = require('request');
 
+// check if its production or not and return the right URI
+function getServer() {
+    if(process.env.NODE_ENV == 'production') {
+        return `${process.env.API_SERVER}`;
+    } else {
+        return `${process.env.API_SERVER}:${process.env.PORT}`;
+    }
+}
+
+
 exports.getFrontPage = (req, res) => {
     const path = '/api/posts';
-    const url = `${process.env.API_SERVER}:${process.env.PORT}${path}`;
+    const url = `${getServer()}${path}`;
     debug('getting ' + url);
 
     const queryOptions = {
@@ -31,7 +41,7 @@ exports.getFrontPagePaginate = (req, res) => {
     debug('page number: ' + pageNumber);
 
     const path = '/api/posts';
-    const url = `${process.env.API_SERVER}:${process.env.PORT}${path}/${pageNumber}`;
+    const url = `${getServer()}${path}/${pageNumber}`;
     debug(`getting paginate url ${url}`);
     const queryOptions = {
         url: url,
@@ -57,7 +67,7 @@ exports.getPageFromStub = (req, res) => {
     debug('finding stub: ' + stub);
 
     const path = '/api/post/';
-    const url = `${process.env.API_SERVER}:${process.env.PORT}${path}${stub}`;
+    const url = `${getServer()}${path}${stub}`;
     debug(`using URL: ${url}`);
     const queryOptions = {
         url: url,
@@ -73,7 +83,7 @@ exports.getPageFromStub = (req, res) => {
        }
 
        if(response.statusCode === 200) {
-           body.url = `${process.env.API_SERVER}:${process.env.PORT}/${stub}`
+           body.url = `${getServer()}/${stub}`
            res.render('post', {data:body});
        }
     });
