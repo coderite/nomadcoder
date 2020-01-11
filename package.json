@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "DEBUG=app-routes-admin,app-ctrl-auth,api-ctrl-post,api-ctrl-posts,api-ctrl-settings,app-ctrl-settings,app-ctrl-admin,user-schema,app-auth,passport,auth,app,app-ctrl-post,app-posts,DB,index,yap,admin,read,authRoutes,localStrategy,passport,postRoutes,google:auth,app-ctrl-frontpage,backend:controller nodemon app.js",
-    "start": "node app.js"
+    "start": "DEBUG=app-routes-admin,app-ctrl-auth,api-ctrl-post,api-ctrl-posts,api-ctrl-settings,app-ctrl-settings,app-ctrl-admin,user-schema,app-auth,passport,auth,app,app-ctrl-post,app-posts,DB,index,yap,admin,read,authRoutes,localStrategy,passport,postRoutes,google:auth,app-ctrl-frontpage,backend:controller node app.js"
   },
   "author": "",
   "license": "ISC",
