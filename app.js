@@ -69,7 +69,7 @@ setInterval(function() {
    http.get('http://www.nomadcoder.io');
 }, 300000);
 
-if(process.env.NODE_ENV !== 'production') {
+if(process.env.NODE_ENV === 'production') {
     app.listen(port, () => debug(`listening on ${process.env.API_SERVER}`));
 } else {
     app.listen(port, () => debug(`listening on ${process.env.API_SERVER}:${port}`));
