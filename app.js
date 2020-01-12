@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const favicon = require('serve-favicon');
 const path = require('path');
+const http = require('http');
 
 // needs to be loaded before the DB models
 const passport = require('passport');
@@ -62,6 +63,11 @@ app.use((err, req, res, next) => {
         res.status(401).json({'message':'Forbidden'});
     }
 });
+
+// heroku hack to prevent free tier from idling
+setInterval(function() {
+   http.get('http://www.nomadcoder.io');
+}, 300000);
 
 if(process.env.NODE_ENV !== 'production') {
     app.listen(port, () => debug(`listening on ${process.env.API_SERVER}`));
