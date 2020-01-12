@@ -5,6 +5,7 @@ const routerBackend = require('./backend');
 const routerAdmin = require('./admin');
 const routerFrontend = require('./frontend');
 const routerPortfolio = require('./portfolio');
+const ctrlSettings = require('../controller/settings');
 
 router.use('/admin', routerAdmin);
 
@@ -16,5 +17,8 @@ router.use('/blog', routerFrontend);
 
 // front end setup for portfolio
 router.use('/', routerPortfolio);
+
+// setup the robots.txt file
+router.use('/robots.txt', ctrlSettings.getRobots);
 
 module.exports = router;

@@ -4,16 +4,10 @@ const debug = require('debug')('postRoutes');
 
 const ctrlFrontpage = require('../controller/frontpage');
 const ctrlSettings = require('../controller/settings');
-const ctrlPortfolio = require('../controller/portfolio');
-
 
 /*
     FRONT PAGE ROUTING
  */
-
-router
-    .route('/robots.txt')
-    .get(ctrlSettings.getRobots);
 
 router
     .route('/aws/upload')
