@@ -21,4 +21,9 @@ router.use('/', routerPortfolio);
 // setup the robots.txt file
 router.use('/robots.txt', ctrlSettings.getRobots);
 
+// catch all 404 errors
+router.get('*', function(req, res) {
+    res.send(`<h1>404</h1><p>Oh lawdy, you broke teh interwebz!</p><p>Or the page you are trying to visit has been transported to another dimension.</p>`);
+});
+
 module.exports = router;
