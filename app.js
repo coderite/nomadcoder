@@ -31,12 +31,10 @@ const routerApp = require('./app_server/routes/index');
 
 /** hemlet security features */
 app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        imgSrc: ['self', '*.imgur.com'],
-        scriptSrc: ['self', '*.cloudfare.com'],
-      },
+  helmet.contentSecurityPolicy({
+    directives: {
+      imgSrc: ['self', '*.imgur.com'],
+      scriptSrc: ['self', '*.cloudfare.com'],
     },
   })
 );
