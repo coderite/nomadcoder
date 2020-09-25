@@ -16,9 +16,9 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ['self'],
-        imgSrc: ['self', '*.imgur.com'],
-        scriptSrc: ['self', '*.cloudfare.com'],
+        defaultSrc: ['self', 'data:'],
+        imgSrc: ['self', 'data:', '*.imgur.com'],
+        scriptSrc: ['self', 'data:', '*.cloudfare.com'],
         baseUri: ['self'],
         blockAllMixedContent: [],
         fontSrc: ['self', 'https'],
