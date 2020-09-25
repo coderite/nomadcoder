@@ -11,6 +11,16 @@ const path = require('path');
 const http = require('http');
 const helmet = require('helmet');
 
+/** hemlet security features */
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      imgSrc: ['self', '*.imgur.com'],
+      scriptSrc: ['self', '*.cloudfare.com'],
+    },
+  })
+);
+
 // needs to be loaded before the DB models
 const passport = require('passport');
 
@@ -28,16 +38,6 @@ const port = process.env.PORT;
 
 const routerApi = require('./api_server/routes/index');
 const routerApp = require('./app_server/routes/index');
-
-/** hemlet security features */
-app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      imgSrc: ['self', '*.imgur.com'],
-      scriptSrc: ['self', '*.cloudfare.com'],
-    },
-  })
-);
 
 // set up view engine
 app.set('view engine', 'ejs');
