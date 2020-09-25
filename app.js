@@ -29,6 +29,8 @@ const port = process.env.PORT;
 const routerApi = require('./api_server/routes/index');
 const routerApp = require('./app_server/routes/index');
 
+app.use(helmet());
+
 // set up view engine
 app.set('view engine', 'ejs');
 app.set('views', 'app_server/views');
@@ -59,8 +61,6 @@ app.use('/api', (req, res, next) => {
   );
   next();
 });
-
-app.use(helmet());
 
 // catch all errors
 app.use((err, req, res, next) => {
