@@ -13,10 +13,13 @@ const helmet = require('helmet');
 
 /** hemlet security features */
 app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      imgSrc: ['self', '*.imgur.com'],
-      scriptSrc: ['self', '*.cloudfare.com'],
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ['self'],
+        imgSrc: ['self', '*.imgur.com'],
+        scriptSrc: ['self', '*.cloudfare.com'],
+      },
     },
   })
 );
