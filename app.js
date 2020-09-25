@@ -30,9 +30,8 @@ const routerApi = require('./api_server/routes/index');
 const routerApp = require('./app_server/routes/index');
 
 /** hemlet security faetures */
-app.use(helmet());
 app.use(
-  helmet.contentSecurityPolicy({
+  helmet().contentSecurityPolicy({
     directives: {
       imgSrc: ['self', '*.imgur.com'],
       scriptSrc: ['self', '*.cloudfare.com'],
