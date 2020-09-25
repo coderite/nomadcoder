@@ -1,303 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
 
-    <link rel="stylesheet" href="/styles_prtfl.css">
+    <link rel="stylesheet" href="/styles_prtfl.css" />
+    <link rel="stylesheet" href="/loader.css" />
+    <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="/divider.css" />
 
     <script defer src="https://kit.fontawesome.com/f2405d2400.js"></script>
     <script defer src="/pjs.js"></script>
+    <script defer src="/portfolio.js"></script>
 
     <title>portfolio</title>
-</head>
-<body>
-    <style>
-        .load-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #AECACE;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .loader {
-            display: inline-block;
-            width: 64px;
-            height: 64px;
-        }
-        .loader:after {
-            content: " ";
-            display: block;
-            width: 46px;
-            height: 46px;
-            margin: 1px;
-            border-radius: 50%;
-            border: 5px solid #ffd442;
-            border-color: #707070 transparent #3d3d3d transparent;
-            animation: lil-spinner 1.2s linear infinite;
-        }
-        @keyframes lil-spinner {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-    </style>
+  </head>
+  <body>
     <div class="load-container">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
     <div class="container" id="container">
-        <header>
-            <nav class="navbar">
-                <div class="navbar-top">
-                    <div class="navbar-brand nav-link">
-                        <h1><a href="/">Nomad Coder</a></h1>
-                    </div>
-                    <div class="navbar-toggle nav-link">
-                        <i class="fas fa-bars" id="toggle-icon"></i>
-                    </div>
-                </div>
-
-                <ul class="nav-items">
-                    <li><a class="nav-link" href="#skills">about</a></li>
-                    <li><a class="nav-link" href="#projects">projects</a></li>
-                    <li><a class="nav-link" href="/blog">blog</a></li>
-                    <li><a class="nav-cta" id="contactBtn" href="#contact">get in touch</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="hero">
-            <div class="hero-filter">
-                <div class="hello">
-                    <p>hello</p>
-                </div>
-                <div class="sub">
-                    <h1>i am Lucas, i build web apps</h1>
-                </div>
-                <div class="btn-container">
-                    <a href="#contact" class="button">get in touch</a>
-                </div>
+      <header>
+        <nav class="navbar">
+          <div class="navbar-top">
+            <div class="navbar-brand nav-link">
+              <h1><a href="/">Nomad Coder</a></h1>
             </div>
-            <div class="cta">
-                <a href="#skills"><i class="fas fa-chevron-down fa-3x"></i></a>
+            <div class="navbar-toggle nav-link">
+              <i class="fas fa-bars" id="toggle-icon"></i>
             </div>
-        </section>
+          </div>
 
-        <section class="skills" id="skills">
-            <div class="header">
+          <ul class="nav-items">
+            <li><a class="nav-link" href="#skills">about</a></li>
+            <li><a class="nav-link" href="#projects">projects</a></li>
+            <li><a class="nav-link" href="/blog">blog</a></li>
+            <li>
+              <a class="nav-cta" id="contactBtn" href="#contact"
+                >get in touch</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-                <h1><i class="fas fa-user"></i> a little about me</h1>
-                <div class="about">
-                    <div class="text">
-                        <p>Hello! I'm Lucas, a freelance web developer. I build modern SAAS web applications that do useful and profitable things.</p>
-                        <p>I have a background in Software Engineering in Test for companies like <a href="https://www.monster.com">Monster</a> and <a href="https://applause.com">Applause</a>. Following a passion I switched focus and started building and operating SAAS applications.</p>
-                        <p> I am available for freelance web development. Have a project you want to discuss? Reach out to me!</p>
-                        <p>In my personal life I am a cave diver and explore the darkness beyond the light. I work remotely and combine a love for web development with a nomadic lifestyle.</p>
-                    </div>
-                    <div class="image">
-                        <img src="/profile.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="technologies-header">
-                <h3>Technologies in my toolbox:</h3>
-            </div>
-            <div class="skill-items">
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/javascript.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">Javascript</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/nodejs.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">NodeJS</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/express.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">ExpressJS</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/mongodb.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">Mongo DB</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/bootstrap.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">Bootstrap</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/github.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">Github</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/heroku.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">Heroku</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/html5.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">HTML5</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/css3.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">CSS3</h4>
-                </div>
-                <div class="skill">
-                    <div class="logo">
-                        <img src="/logo/sass.png" loading="lazy" />
-                    </div>
-                    <h4 class="sub">SASS</h4>
-                </div>
-            </div>
-        </section>
+      <section class="hero">
+        <div class="hero-filter">
+          <div class="hello">
+            <p>hello</p>
+          </div>
+          <div class="sub">
+            <h1>i am Lucas, i build web apps</h1>
+          </div>
+          <div class="btn-container">
+            <a href="#contact" class="button">get in touch</a>
+          </div>
+        </div>
+        <div class="cta">
+          <a href="#skills"><i class="fas fa-chevron-down fa-3x"></i></a>
+        </div>
+      </section>
 
-        <section class="projects" id="projects">
-            <div class="header">
-                <h1><i class="fas fa-drafting-compass"></i> projects</h1>
-                <p>Past and current projects I have worked on as the sole full-stack engineer.</p>
+      <section class="skills" id="skills">
+        <div class="header">
+          <h1><i class="fas fa-user"></i> a little about me</h1>
+          <div class="about">
+            <div class="text">
+              <p>
+                Hello! I'm Lucas, a freelance web developer. I build modern SAAS
+                web applications that do useful and profitable things.
+              </p>
+              <p>
+                I have a background in Software Engineering in Test for
+                companies like <a href="https://www.monster.com">Monster</a> and
+                <a href="https://applause.com">Applause</a>. Following a passion
+                I switched focus and started building and operating SAAS
+                applications.
+              </p>
+              <p>
+                I am available for freelance web development. Have a project you
+                want to discuss? Reach out to me!
+              </p>
+              <p>
+                In my personal life I am a cave diver and explore the darkness
+                beyond the light. I work remotely and combine a love for web
+                development with a nomadic lifestyle.
+              </p>
             </div>
-
-            <div class="p-container">
-                <div class="project">
-                    <img src="./p1.jpg" loading="lazy" >
-                </div>
-                <div class="project">
-                    <img src="./p1.jpg" loading="lazy" >
-                </div>
-                <div class="project">
-                    <img src="./p1.jpg" loading="lazy" >
-                </div>
+            <div class="image">
+              <img src="/profile.jpg" />
             </div>
-        </section>
-
-        <section class="blog" id="blog">
-            <div class="filter">
-                <div class="btn-container">
-                    <a href="/blog" class="button">read my blog</a>
-                </div>
+          </div>
+        </div>
+        <div class="technologies-header">
+          <h3>Technologies in my toolbox:</h3>
+        </div>
+        <div class="skill-items">
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/javascript.png" loading="lazy" />
             </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <div class="header">
-                <h1><i class="far fa-envelope"></i> get in touch</h1>
-                <p>Got a project you want to discuss? Work opportunity? Want to wax metaphysical and discuss our purpose in the universe?</p>
-                <p>Reach out, I would love to hear from you!</p>
+            <h4 class="sub">Javascript</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/nodejs.png" loading="lazy" />
             </div>
-
-            <form class="email" name="email-form" method="POST" action="/message">
-                <div class="row">
-                    <div class="row-item">
-                        <label>Name *</label>
-                        <input type="text" id="name" name="name">
-                    </div>
-                    <div class="row-item">
-                        <label>Email *</label>
-                        <input type="text" id="email" name="email">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row-item">
-                        <label>Subject</label>
-                        <select id="subject" name="subject">
-                            <option>I want to discuss a project</option>
-                            <option>I'm looking for a new team member</option>
-                            <option>Some other reason</option>
-                            <option>I'm with the press!</option>
-                        </select>
-                    </div>
-                    <div class="row-item">
-                        <label>Estimated budget</label>
-                        <select id="budget" name="budget">
-                            <option>N/A</option>
-                            <option>$5,000 - $10,000</option>
-                            <option>$10,000 - $20,000</option>
-                            <option>> $20,000</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <textarea id="message" name="message" placeholder="write beautiful words..."></textarea>
-                </div>
-                <div class="row">
-                    <button type="submit" value="submit" id="submit">submit</button>
-                </div>
-            </form>
-        </section>
-
-        <div class="notification-wrapper" id="notification-wrapper">
-            <div class="notification-container">
-                <div class="header">
-                    <h1 id="notification-header-text"></h1>
-                    <div class="close" id="close">
-                        <i class="far fa-window-close"></i>
-                    </div>
-                </div>
-                <div class="body">
-                    <p id="notification-body-text"></p>
-                </div>
+            <h4 class="sub">NodeJS</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/express.png" loading="lazy" />
             </div>
+            <h4 class="sub">ExpressJS</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/mongodb.png" loading="lazy" />
+            </div>
+            <h4 class="sub">Mongo DB</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/bootstrap.png" loading="lazy" />
+            </div>
+            <h4 class="sub">Bootstrap</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/github.png" loading="lazy" />
+            </div>
+            <h4 class="sub">Github</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/heroku.png" loading="lazy" />
+            </div>
+            <h4 class="sub">Heroku</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/html5.png" loading="lazy" />
+            </div>
+            <h4 class="sub">HTML5</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/css3.png" loading="lazy" />
+            </div>
+            <h4 class="sub">CSS3</h4>
+          </div>
+          <div class="skill">
+            <div class="logo">
+              <img src="/logo/sass.png" loading="lazy" />
+            </div>
+            <h4 class="sub">SASS</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="header">
+          <h1><i class="fas fa-drafting-compass"></i> projects</h1>
+          <p>
+            Past and current projects I have worked on as the sole full-stack
+            engineer.
+          </p>
         </div>
 
+        <div class="p-container">
+          <div class="project">
+            <img src="./p1.jpg" loading="lazy" />
+          </div>
+          <div class="project">
+            <img src="./p1.jpg" loading="lazy" />
+          </div>
+          <div class="project">
+            <img src="./p1.jpg" loading="lazy" />
+          </div>
+        </div>
+      </section>
 
-        <!-- FOOTER -->
-        <%- include('./snippets/footer'); %>
+      <section class="blog" id="blog">
+        <div class="custom-shape-divider-top-1601059420">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <div class="custom-shape-divider-bottom-1601059150">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <div class="filter">
+          <div class="btn-container">
+            <a href="/blog" class="button">read my blog</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="header">
+          <h1><i class="far fa-envelope"></i> get in touch</h1>
+          <p>
+            Got a project you want to discuss? Work opportunity? Want to wax
+            metaphysical and discuss our purpose in the universe?
+          </p>
+          <p>Reach out, I would love to hear from you!</p>
+        </div>
+
+        <form class="email" name="email-form" method="POST" action="/message">
+          <div class="row">
+            <div class="row-item">
+              <label>Name *</label>
+              <input class="infield" type="text" id="name" name="name" />
+            </div>
+            <div class="row-item">
+              <label>Email *</label>
+              <input type="text" id="email" name="email" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="row-item">
+              <label>Subject</label>
+              <select id="subject" name="subject">
+                <option>I want to discuss a project</option>
+                <option>I'm looking for a new team member</option>
+                <option>Some other reason</option>
+                <option>I'm with the press!</option>
+              </select>
+            </div>
+            <div class="row-item">
+              <label>Estimated budget</label>
+              <select id="budget" name="budget">
+                <option>N/A</option>
+                <option>$5,000 - $10,000</option>
+                <option>$10,000 - $20,000</option>
+                <option>> $20,000</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="write beautiful words..."
+            ></textarea>
+          </div>
+          <div class="row">
+            <button type="submit" value="submit" id="submit">submit</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="notification-wrapper" id="notification-wrapper">
+        <div class="notification-container">
+          <div class="header">
+            <h1 id="notification-header-text"></h1>
+            <div class="close" id="close">
+              <i class="far fa-window-close"></i>
+            </div>
+          </div>
+          <div class="body">
+            <p id="notification-body-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <%- include('./snippets/footer'); %>
     </div>
-
-    <script>
-        document.querySelector('.container').style.display = "none";
-        console.log('waiting for page to load');
-        window.addEventListener('load', () => {
-            document.querySelector('.container').style.display = "grid";
-            document.querySelector('.load-container').style.display = "none";
-            console.log('page loaded');
-        });
-
-        /*
-        check if hero image has loaded
-         */
-        const heroImageUrl = getComputedStyle(document.querySelector('.hero')).backgroundImage.slice(4, -1).replace(/"/g, "");
-        let heroImage = new Image();
-        heroImage.src = heroImageUrl;
-        console.log('hero image url found ' + heroImageUrl);
-        heroImage.addEventListener('load', () => {
-            if(heroImage.complete) {
-                console.log('hero image loaded');
-            }
-        });
-
-        const images = document.querySelectorAll('img');
-        console.log('number of images: ' + images.length);
-        images.forEach(image => {
-            image.addEventListener('load', () => {
-                console.log('loaded: ' + image.getAttribute('src'));
-            });
-        });
-
-
-
-    </script>
-</body>
+  </body>
 </html>

@@ -1,17 +1,85 @@
 /* line 5, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,7 +94,8 @@ html {
 }
 
 /* line 24, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -37,19 +106,25 @@ table {
 }
 
 /* line 28, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
+caption,
+th,
+td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
 /* line 30, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
+q,
+blockquote {
   quotes: none;
 }
 /* line 103, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: '';
   content: none;
 }
 
@@ -59,7 +134,19 @@ a img {
 }
 
 /* line 116, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block;
 }
 
@@ -74,7 +161,11 @@ body {
 }
 
 /* line 14, ../../sass/styles_prtfl.scss */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Roboto Condensed', Sans-Serif;
   font-size: 40px;
 }
@@ -103,7 +194,8 @@ textarea {
 }
 
 /* line 38, ../../sass/styles_prtfl.scss */
-ol, ul {
+ol,
+ul {
   list-style: none;
   padding-left: 2%;
   line-height: 1.5;
@@ -223,7 +315,7 @@ header .navbar .show {
   }
   /* line 160, ../../sass/styles_prtfl.scss */
   header .navbar .nav-items li .nav-link::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 1px;
@@ -251,7 +343,7 @@ header .navbar .show {
   }
   /* line 189, ../../sass/styles_prtfl.scss */
   header .navbar .nav-items li .nav-cta::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -289,13 +381,13 @@ header .navbar .show {
   grid-column-end: 4;
   height: calc(100vh - 0px);
   text-align: center;
-  background-color: #AECACE;
-  background-image: url("hero_section_mobile.jpg");
+  background-color: #aecace;
+  background-image: url('hero_section_mobile.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
-    /*
+  /*
   .btnContact {
     margin-top: 3%;
     border: 1px solid rgba(255, 255, 255 ,0.4);
@@ -404,7 +496,7 @@ header .navbar .show {
 @media only screen and (min-width: 800px) {
   /* line 231, ../../sass/styles_prtfl.scss */
   .hero {
-    background-image: url("hero_section_large.jpg");
+    background-image: url('hero_section_large.jpg');
   }
 }
 
@@ -520,7 +612,7 @@ header .navbar .show {
   grid-column-start: 1;
   grid-column-end: 4;
   padding: 30px 10px;
-  background-color: #AECACE;
+  /* background-color: #aecace; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -567,16 +659,18 @@ header .navbar .show {
   grid-row-end: 6;
   grid-column-start: 1;
   grid-column-end: 4;
-  min-height: 60vh;
-  background-image: url("/blog_section_mobile.jpg"), linear-gradient(#AECACE, white);
+  min-height: 80vh;
+  background-image: url('/blog_section_mobile.jpg'),
+    linear-gradient(#aecace, white);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
+  position: relative;
 }
 /* line 566, ../../sass/styles_prtfl.scss */
 .blog .filter {
-  height: 60vh;
+  height: 80vh;
   background-color: rgba(174, 202, 206, 0.25);
   background-blend-mode: multiply;
   display: flex;
@@ -615,7 +709,7 @@ header .navbar .show {
   border-radius: 4px;
   padding: 15px 20px;
   white-space: nowrap;
-  transition: all 0.2s ease-in;
+  transition: all 0.05s ease-in;
 }
 /* line 611, ../../sass/styles_prtfl.scss */
 .blog .filter .btn-container a:hover {
@@ -625,7 +719,8 @@ header .navbar .show {
 @media only screen and (min-width: 800px) {
   /* line 550, ../../sass/styles_prtfl.scss */
   .blog {
-    background-image: url("/blog_section_large.jpg"), linear-gradient(#AECACE, white);
+    background-image: url('/blog_section_large.jpg'),
+      linear-gradient(#aecace, white);
   }
 }
 
@@ -641,13 +736,24 @@ header .navbar .show {
   justify-content: center;
   align-items: center;
   padding: 30px 10px;
-  background-color: rgba(196, 212, 178, 0.58);
+  /* background-color: rgba(196, 212, 178, 0.58); */
   /*
   background-image: url('contact2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
    */
+}
+.contact form {
+  border-radius: 4px;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /*
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3); */
 }
 /* line 649, ../../sass/styles_prtfl.scss */
 .contact .header {
@@ -685,7 +791,8 @@ header .navbar .show {
   flex-direction: column;
 }
 /* line 685, ../../sass/styles_prtfl.scss */
-.contact .email .row .row-item input, .contact .email .row .row-item select {
+.contact .email .row .row-item input,
+.contact .email .row .row-item select {
   color: rgba(0, 0, 0, 0.8);
   border: none;
   border-radius: 3px;
@@ -727,6 +834,7 @@ header .navbar .show {
   box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease-in;
 }
+
 /* line 732, ../../sass/styles_prtfl.scss */
 .contact .email .row button:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -737,6 +845,8 @@ header .navbar .show {
   background-color: rgba(0, 0, 0, 0.1);
 }
 @media only screen and (min-width: 864px) {
+  .contact .email {
+  }
   /* line 743, ../../sass/styles_prtfl.scss */
   .contact .email .row textarea {
     width: 600px;
@@ -832,20 +942,21 @@ footer {
   grid-column-end: 4;
   color: #4b4b4b;
   background-color: #98afb3;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.05);
-  background-image: url("/tropical-white.png");
+  /* border-top: 0.5px solid rgba(0, 0, 0, 0.05); */
+  background-image: url('/tropical-white.png');
   background-repeat: no-repeat;
   background-size: 200px auto;
   background-position: bottom 45px left;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 /* line 862, ../../sass/styles_prtfl.scss */
 footer .text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 5% 24px 5%;
+  padding: 100px 5% 24px 5%;
 }
 /* line 870, ../../sass/styles_prtfl.scss */
 footer .text h1 {
@@ -889,7 +1000,7 @@ footer .nav .nav-items .nav-item a {
 /* line 911, ../../sass/styles_prtfl.scss */
 footer .nav .nav-items .nav-item:hover {
   padding: 8px 9px 7px 9px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-top-left-radius: 3px;

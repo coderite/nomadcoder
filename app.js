@@ -11,28 +11,22 @@ const path = require('path');
 const http = require('http');
 const helmet = require('helmet');
 
+//app.use(helmet());
+
 /** hemlet security features */
 app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ['self', 'data:'],
-        imgSrc: ['self', 'data:', '*.imgur.com'],
-        scriptSrc: ['self', 'data:', '*.cloudfare.com'],
-        baseUri: ['self'],
-        blockAllMixedContent: [],
-        fontSrc: ['self', 'https'],
-        frameAncestors: ['self'],
-        objectSrc: ['none'],
-        scriptSrcAttr: ['none'],
-        styleSrc: ['self', 'https', 'unsafe-inline'],
-        upgradeInsecureRequests: [],
+        defaultSrc: ['*'],
+        fontSrc: ['*'],
       },
     },
   })
 );
 
 // needs to be loaded before the DB models
+
 const passport = require('passport');
 
 // connect to the Mongo database
