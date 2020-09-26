@@ -20,7 +20,12 @@ app.use(
       directives: {
         defaultSrc: ['*'],
         fontSrc: ['*'],
-        scriptSrc: ['self', '*.fontawesome.com', '*.cloudfare.com'],
+        scriptSrc: [
+          'self',
+          '*.fontawesome.com',
+          '*.cloudfare.com',
+          'nomadcoder.io',
+        ],
       },
     },
   })
