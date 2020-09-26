@@ -6,6 +6,7 @@ function getServer() {
   if (process.env.NODE_ENV == 'production') {
     return `${process.env.API_SERVER}`;
   } else {
+    debug('FUUUUUUUUUUUUUUUUUUUUUU');
     return `${process.env.API_SERVER}:${process.env.PORT}`;
   }
 }

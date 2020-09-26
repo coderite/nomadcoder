@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 const debug = require('debug')('DB');
 
-let dbURI = process.env.DB_SERVER;
-if (process.env.NODE_ENV === 'production') {
-  dbURI = process.env.MONGODB_URI;
-}
+let dbURI = process.env.MONGODB_URI;
 
 debug('connecting to MongoDB @' + dbURI);
 

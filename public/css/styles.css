@@ -3,19 +3,87 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 5, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -30,7 +98,8 @@ html {
 }
 
 /* line 24, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -41,19 +110,25 @@ table {
 }
 
 /* line 28, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
+caption,
+th,
+td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
 /* line 30, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
+q,
+blockquote {
   quotes: none;
 }
 /* line 103, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: '';
   content: none;
 }
 
@@ -63,7 +138,19 @@ a img {
 }
 
 /* line 116, ../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block;
 }
 
@@ -74,12 +161,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 10, ../../sass/styles.scss */
 body {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
   font-family: 'Cabin', Sans-Serif;
 }
 
 /* line 15, ../../sass/styles.scss */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Roboto', sans-serif;
   font-size: 40px;
   text-shadow: 1px 1px 1px #aaa;
@@ -92,7 +183,8 @@ p {
 }
 
 /* line 27, ../../sass/styles.scss */
-ol, ul {
+ol,
+ul {
   list-style: none;
   list-style: decimal;
   padding-left: 2%;
@@ -100,7 +192,8 @@ ol, ul {
 }
 
 /* line 34, ../../sass/styles.scss */
-iframe, img {
+iframe,
+img {
   padding: 10px 0;
   max-width: 100%;
 }
@@ -218,7 +311,9 @@ header .headlines {
 header a {
   font-size: 1.2em;
   all: unset;
+  text-decoration: 'none';
   cursor: pointer;
+  color: inherit;
 }
 /* line 171, ../../sass/styles.scss */
 header h1 {
@@ -237,7 +332,7 @@ header .header_sub {
   FOOTER
   mobile-first ready (optimized for small screens)
  */
-/* line 191, ../../sass/styles.scss */
+/* line 844, ../../sass/styles_prtfl.scss */
 footer {
   grid-row-start: 7;
   grid-row-end: 8;
@@ -245,73 +340,71 @@ footer {
   grid-column-end: 4;
   color: #4b4b4b;
   background-color: #98afb3;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.05);
-  background-image: url("/tropical-white.png");
+  /* border-top: 0.5px solid rgba(0, 0, 0, 0.05); */
+  background-image: url('/tropical-white.png');
   background-repeat: no-repeat;
   background-size: 200px auto;
   background-position: bottom 45px left;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-/* line 209, ../../sass/styles.scss */
+/* line 862, ../../sass/styles_prtfl.scss */
 footer .text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 5% 24px 5%;
+  padding: 100px 5% 24px 5%;
 }
-/* line 217, ../../sass/styles.scss */
+/* line 870, ../../sass/styles_prtfl.scss */
 footer .text h1 {
   font-size: 3em;
   padding-bottom: 15px;
 }
-/* line 222, ../../sass/styles.scss */
+/* line 875, ../../sass/styles_prtfl.scss */
 footer .text p {
   font-size: 1em;
   padding-bottom: 8px;
   text-align: center;
 }
-/* line 228, ../../sass/styles.scss */
+/* line 881, ../../sass/styles_prtfl.scss */
 footer .text a {
-  unset: all;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
-/* line 235, ../../sass/styles.scss */
+/* line 888, ../../sass/styles_prtfl.scss */
 footer .text a:hover {
   color: #585858;
 }
-/* line 241, ../../sass/styles.scss */
+/* line 894, ../../sass/styles_prtfl.scss */
 footer .nav .nav-items {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-/* line 247, ../../sass/styles.scss */
+/* line 900, ../../sass/styles_prtfl.scss */
 footer .nav .nav-items .nav-item {
   padding: 8px 10px;
   cursor: pointer;
 }
-/* line 251, ../../sass/styles.scss */
+/* line 904, ../../sass/styles_prtfl.scss */
 footer .nav .nav-items .nav-item a {
-  unset: all;
   text-decoration: none;
   color: inherit;
 }
-/* line 258, ../../sass/styles.scss */
+/* line 911, ../../sass/styles_prtfl.scss */
 footer .nav .nav-items .nav-item:hover {
   padding: 8px 9px 7px 9px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background-color: rgba(0, 0, 0, 0.05);
-  color: white;
   color: #585858;
 }
-/* line 273, ../../sass/styles.scss */
+/* line 926, ../../sass/styles_prtfl.scss */
 footer .copyright {
   display: flex;
   flex-direction: column;
@@ -320,81 +413,14 @@ footer .copyright {
   padding: 8px 0;
   background-color: rgba(0, 0, 0, 0.05);
 }
-/* line 283, ../../sass/styles.scss */
+/* line 936, ../../sass/styles_prtfl.scss */
 footer .copyright p {
   color: #5a5a5a;
   font-size: 0.7em;
 }
 
-/*
-  FOOTER
-  mobile-first ready (optimized for small screens)
- */
-/*
-footer {
-  grid-row-start: 6;
-  grid-row-end: 7;
-  grid-column-start: 1;
-  grid-column-end: 4;
+/* END OF FOOTER */
 
-  color: $footer-text-color;
-  background-color: $footer-bg-color;
-  border-top: 0.5px solid rgba(0,0,0,0.05);
-
-  background-image: url('/tropical-white.png');
-  background-repeat: no-repeat;
-  background-size: 200px auto;
-  background-position: bottom 45px left;
-
-  display: flex;
-  flex-direction: column;
-
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 50px 5% 24px 5%;
-  }
-
-  .text h1 {
-    font-size: 3em;
-    padding-bottom: 15px;
-  }
-
-  .text p {
-    font-size: 1em;
-    padding-bottom: 8px;
-    text-align:center;
-  }
-
-  .text a {
-    unset: all;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
-
-  .text a:hover {
-    color: #585858;
-  }
-
-  .copyright {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 8px 0;
-    background-color: rgba(0,0,0,0.05);
-  }
-
-  .copyright p {
-    color: $footer-text-color-muted;
-    font-size: 0.7em;
-  }
-}  // END OF FOOTER
-*/
 /*
 pagination for main pages
  */
@@ -410,8 +436,8 @@ pagination for main pages
 .older {
   all: unset;
   cursor: pointer;
-  Font-Family: 'Cabin', Sans-Serif;
-  Font-Size: 16px;
+  font-family: 'Cabin', Sans-Serif;
+  font-size: 16px;
   padding-right: 5px;
 }
 
@@ -424,8 +450,8 @@ pagination for main pages
 .newer {
   all: unset;
   cursor: pointer;
-  Font-Family: 'Cabin', Sans-Serif;
-  Font-Size: 16px;
+  font-family: 'Cabin', Sans-Serif;
+  font-size: 16px;
   padding-left: 5px;
 }
 
@@ -529,7 +555,9 @@ pagination for main pages
 }
 
 /* line 487, ../../sass/styles.scss */
-.hvr-buzz-out:hover, .hvr-buzz-out:focus, .hvr-buzz-out:active {
+.hvr-buzz-out:hover,
+.hvr-buzz-out:focus,
+.hvr-buzz-out:active {
   -webkit-animation-name: hvr-buzz-out;
   animation-name: hvr-buzz-out;
   -webkit-animation-duration: 0.75s;
