@@ -40,3 +40,24 @@
 .custom-shape-divider-bottom-1601059150 .shape-fill {
   fill: #ffffff;
 }
+
+.custom-shape-divider-bottom-1601096213 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1601096213 svg {
+  position: relative;
+  display: block;
+  width: calc(155% + 1.3px);
+  height: 49px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1601096213 .shape-fill {
+  fill: #ffffff;
+}
