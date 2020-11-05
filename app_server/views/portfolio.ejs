@@ -93,6 +93,8 @@
             </div>
           </div>
         </div>
+
+        <!--
         <div class="technologies-header">
           <h3>Technologies in my toolbox:</h3>
         </div>
@@ -158,27 +160,45 @@
             <h4 class="sub">SASS</h4>
           </div>
         </div>
+        -->
       </section>
 
       <section class="projects" id="projects">
         <div class="header">
           <h1><i class="fas fa-drafting-compass"></i> projects</h1>
           <p>
-            Past and current projects I have worked on as the sole full-stack
-            engineer.
+            Past and current projects
           </p>
         </div>
 
         <div class="p-container">
+          <!-- start project entry -->
           <div class="project">
-            <img src="./p1.jpg" loading="lazy" />
+            <!-- start header -->
+            <div class="image">
+              <img src="./portfolio/projects/newstream.webp" loading="lazy" />
+            </div>
+            <!-- start card -->
+            <div class="card">
+              <div class="card-header">
+                <h2>The Bias</h2>
+                <p>Get a news stream including political bias for easy viewing.</p>
+              </div>  
+
+              <div class="card-body">
+                <h2>Mission</h2>
+                <p>Develop a serverless news agreggator.</p>
+                <h2>Technologies</h2>
+                <p>Frontend UI is built in React.js. Deployed on AWS Amplify.</p>
+                <p>UI polls JSON object arrays from a backend REST API (Node.js/Express.js). Deployed on Heroku and not serverless in order to allow future web socket integration.</p>
+                <p>REST API responds to UI requests and returns data from a Mongo database hosted in the Mongo Atlas cloud.</p>
+                <p>Database is populated with new articles parsed from RSS feeds by a serverless function (Node.js/Vanilla Javascript) deployed on AWS Lambda</p>
+              </div>
+              <!-- end card -->
+            </div>
           </div>
-          <div class="project">
-            <img src="./p1.jpg" loading="lazy" />
-          </div>
-          <div class="project">
-            <img src="./p1.jpg" loading="lazy" />
-          </div>
+          <!-- end project entry -->
+
         </div>
       </section>
 
