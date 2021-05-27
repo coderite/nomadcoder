@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "DEBUG=* nodemon app.js",
-    "start": "node app.js"
+    "start": "DEBUG=* node app.js"
   },
   "author": "Lucas Sadilek",
   "license": "ISC",
